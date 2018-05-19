@@ -202,6 +202,9 @@ public class PolyvMainActivity extends Activity implements OnClickListener {
     private void gotoActivity(int type) {
         PolyvPermission.OperationType OperationType = PolyvPermission.OperationType.getOperationType(type);
         switch (OperationType) {
+            case play:
+                startActivity(new Intent(PolyvMainActivity.this, PolyvOnlineVideoActivity.class));
+                break;
             case download:
                 startActivity(new Intent(PolyvMainActivity.this, PolyvDownloadActivity.class));
                 break;

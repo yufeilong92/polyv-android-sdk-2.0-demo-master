@@ -33,8 +33,8 @@ android {
     }
 
     //修改输出apk的名称
-    android.applicationVariants.all {variant->
-        variant.outputs.each { output->
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
             def outputFile = output.outputFile;
             if (outputFile != null && outputFile.name.endsWith(".apk")) {
                 //这里修改apk文件名
